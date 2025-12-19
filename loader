@@ -1,50 +1,50 @@
 local SCRIPTS_BY_GAME = {
     [13985151437] = {
         name = "Casual Stock",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/стак"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/casual%20stock"
     },
     [102871156420149] = {
         name = "Lost Front",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/ласт франт"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front"
     },
     [72299838142412] = {
         name = "Lost Front",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/ласт франт"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front"
     },
     [136801880565837] = {
         name = "Flick",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/флак"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/flick"
     },
     [6608498361] = {
         name = "Cursed Tank Simulator",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/панки танка"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/cursed%20tank%20sim"
     },
     [6925857548] = {
         name = "Cursed Tank Simulator",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/панки танка"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/cursed%20tank%20sim"
     },
     -- Counter Blox
     [1869597719] = {
         name = "Counter Blox",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/кантер блас"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/counter%20blox"
     },
     [301549746] = {
         name = "Counter Blox",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/кантер блас"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/counter%20blox"
     },
     [1480424328] = {
         name = "Counter Blox",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/кантер блас"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/counter%20blox"
     },
     -- The Lost Front
     [82702369391395] = {
         name = "The Lost Front",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/ласт франт"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front"
     },
     -- VIOLENCE DISTRICT
     [93978595733734] = {
         name = "VIOLENCE DISTRICT",
-        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/дбд"
+        url = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/dbd"
     }
 }
 
@@ -115,17 +115,17 @@ if gameType then
     else
         -- Fallback для каждой игры
         if gameType.name == "Casual Stock" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/стак"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/casual%20stock"))()
         elseif gameType.name == "Lost Front" or gameType.name == "The Lost Front" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/ласт франт"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front"))()
         elseif gameType.name == "Flick" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/флак"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/flick"))()
         elseif gameType.name == "Cursed Tank Simulator" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/панки танка"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/cursed%20tank%20sim"))()
         elseif gameType.name == "Counter Blox" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/кантер блас"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/counter%20blox"))()
         elseif gameType.name == "VIOLENCE DISTRICT" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/дбд"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/dbd"))()
         end
     end
 else
