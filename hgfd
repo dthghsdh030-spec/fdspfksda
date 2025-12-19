@@ -115,17 +115,17 @@ if gameType then
     else
         -- Fallback для каждой игры
         if gameType.name == "Casual Stock" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/fdffFFFF"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/стак"))()
         elseif gameType.name == "Lost Front" or gameType.name == "The Lost Front" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/123"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/ласт франт"))()
         elseif gameType.name == "Flick" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/fdsfds"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/флак"))()
         elseif gameType.name == "Cursed Tank Simulator" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/savo"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/панки танка"))()
         elseif gameType.name == "Counter Blox" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/321"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/кантер блас"))()
         elseif gameType.name == "VIOLENCE DISTRICT" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/viloance%20distrcewwf"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/дбд"))()
         end
     end
 else
