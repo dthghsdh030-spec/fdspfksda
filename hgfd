@@ -1,0 +1,133 @@
+local SCRIPTS_BY_GAME = {
+    [13985151437] = {
+        name = "Casual Stock",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/fdffFFFF"
+    },
+    [102871156420149] = {
+        name = "Lost Front",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/123"
+    },
+    [72299838142412] = {
+        name = "Lost Front",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/123"
+    },
+    [136801880565837] = {
+        name = "Flick",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/fdsfds"
+    },
+    [6608498361] = {
+        name = "Cursed Tank Simulator",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/savo"
+    },
+    [6925857548] = {
+        name = "Cursed Tank Simulator",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/savo"
+    },
+    -- Counter Blox
+    [1869597719] = {
+        name = "Counter Blox",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/321"
+    },
+    [301549746] = {
+        name = "Counter Blox",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/321"
+    },
+    [1480424328] = {
+        name = "Counter Blox",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/321"
+    },
+    -- The Lost Front
+    [82702369391395] = {
+        name = "The Lost Front",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/123"
+    },
+    -- VIOLENCE DISTRICT
+    [93978595733734] = {
+        name = "VIOLENCE DISTRICT",
+        url = "https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/bait%20violance"
+    }
+}
+
+local function UniversalHttpGet(url)
+    local result
+    -- Game HttpGet
+    local ok, res = pcall(function() return game:HttpGet(url) end)
+    if ok and type(res) == "string" and #res > 0 then
+        result = res
+    end
+
+    -- syn.request
+    if not result and syn and syn.request then
+        ok, res = pcall(function() return syn.request({Url = url, Method = "GET"}).Body end)
+        if ok and type(res) == "string" and #res > 0 then
+            result = res
+        end
+    end
+
+    -- http_request / httprequest / http
+    if not result and (http_request or httprequest or http) then
+        local req = http_request or httprequest or (http and http.request)
+        if req then
+            ok, res = pcall(function() return req({Url = url, Method = "GET"}).Body end)
+            if ok and type(res) == "string" and #res > 0 then
+                result = res
+            end
+        end
+    end
+
+    -- fluxus.request
+    if not result and fluxus and fluxus.request then
+        ok, res = pcall(function() return fluxus.request({Url = url, Method = "GET"}).Body end)
+        if ok and type(res) == "string" and #res > 0 then
+            result = res
+        end
+    end
+
+    -- WRD (если есть поддержка)
+    if not result and WRD and WRD.Get then
+        ok, res = pcall(function() return WRD.Get(url) end)
+        if ok and type(res) == "string" and #res > 0 then
+            result = res
+        end
+    end
+
+    return result
+end
+
+local gameType = SCRIPTS_BY_GAME[game.PlaceId]
+
+if gameType then
+    print("[Loader] Игра найдена: "..gameType.name.." ("..tostring(game.PlaceId)..")")
+    -- Универсальная попытка загрузить скрипт
+    local scriptContent = UniversalHttpGet(gameType.url)
+    if scriptContent and type(scriptContent) == "string" and #scriptContent > 0 then
+        local func, lerr = loadstring(scriptContent)
+        if func then
+            local ok, err = pcall(func)
+            if ok then
+                print("[Loader] Скрипт успешно запущен (универсальный способ)")
+            else
+                warn("[Loader] Ошибка при запуске скрипта:", err)
+            end
+        else
+            warn("[Loader] Ошибка loadstring:", lerr)
+        end
+    else
+        -- Fallback для каждой игры
+        if gameType.name == "Casual Stock" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/fdffFFFF"))()
+        elseif gameType.name == "Lost Front" or gameType.name == "The Lost Front" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/123"))()
+        elseif gameType.name == "Flick" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/fdsfds"))()
+        elseif gameType.name == "Cursed Tank Simulator" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/savo"))()
+        elseif gameType.name == "Counter Blox" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/321"))()
+        elseif gameType.name == "VIOLENCE DISTRICT" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/nehaevmiha7-star/filess/refs/heads/main/viloance%20distrcewwf"))()
+        end
+    end
+else
+    warn("[Loader] Скрипт не найден для PlaceId: " .. tostring(game.PlaceId))
+end
