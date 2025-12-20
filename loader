@@ -4,16 +4,19 @@ local GAMES = {
         name = "Casual Stock",
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/casual%20stock",
         places = {
-            13985151437
+            13985151437,
+            14145034258,
+            15267035203
         }
     },
 
     {
-        name = "Lost Front",
+        name = "The Lost Front",
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front",
         places = {
             102871156420149,
-            72299838142412
+            72299838142412,
+            82702369391395
         }
     },
 
@@ -30,7 +33,9 @@ local GAMES = {
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/cursed%20tank%20sim",
         places = {
             6608498361,
-            6925857548
+            6925857548,
+            17587823003,
+            17820272411
         }
     },
 
@@ -38,17 +43,10 @@ local GAMES = {
         name = "Counter Blox",
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/counter%20blox",
         places = {
-            1869597719,
             301549746,
-            1480424328
-        }
-    },
-
-    {
-        name = "The Lost Front",
-        url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front",
-        places = {
-            82702369391395
+            1480424328,
+            1869597719,
+            5325113759
         }
     },
 
@@ -194,7 +192,7 @@ if gameConfig then
         -- Fallback по имени
         if gameConfig.name == "Casual Stock" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/casual%20stock"))()
-        elseif gameConfig.name == "Lost Front" or gameConfig.name == "The Lost Front" then
+        elseif gameConfig.name == "The Lost Front" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/the%20lost%20front"))()
         elseif gameConfig.name == "Flick" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/flick"))()
