@@ -37,7 +37,6 @@ pcall(function()
         hwid = tostring(get_hw_id())
     end
 end)
--- <--- КОПИРОВАНИЕ В БУФЕР УДАЛЕНО --->
 
 local function GetExecutorName()
     local ok, exec = pcall(function()
@@ -187,6 +186,7 @@ end
 coroutine.wrap(function()
     SendWebhookWithRetry(data)
 end)()
+
 local GAMES = {
     {
         name = "Casual Stock",
@@ -246,7 +246,6 @@ local GAMES = {
         }
     },
 
-    -- ОДИН СКРИПТ ДЛЯ ВСЕХ Notoriety PlaceId
     {
         name = "Notoriety",
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Notoriety",
@@ -285,6 +284,17 @@ local GAMES = {
             121625668096152,
             127121302275120,
             129817754677038
+        }
+    },
+
+    {
+        name = "Bubble Gum Simulator INFINITY",
+        url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/bubl%20gum%20sim",
+        places = {
+            80630096603395,
+            85896571713843,
+            98046029518959,
+            127738893422250
         }
     }
 }
@@ -392,6 +402,8 @@ if gameConfig then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/dbd"))()
         elseif gameConfig.name == "Notoriety" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Notoriety"))()
+        elseif gameConfig.name == "Bubble Gum Simulator INFINITY" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/bubl%20gum%20sim"))()
         end
     end
 else
