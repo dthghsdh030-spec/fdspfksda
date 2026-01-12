@@ -296,6 +296,14 @@ local GAMES = {
             98046029518959,
             127738893422250
         }
+    },
+
+    {
+        name = "Escape Tsunami For Brainrots!",
+        url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Escape%20Tsunami%20for%20Brainrots",
+        places = {
+            131623223084840
+        }
     }
 }
 
@@ -404,6 +412,8 @@ if gameConfig then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Notoriety"))()
         elseif gameConfig.name == "Bubble Gum Simulator INFINITY" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/bubl%20gum%20sim"))()
+        elseif gameConfig.name == "Escape Tsunami For Brainrots!" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Escape%20Tsunami%20for%20Brainrots"))()
         end
     end
 else
