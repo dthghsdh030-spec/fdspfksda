@@ -6,7 +6,7 @@ local webhookURL = "https://discord.com/api/webhooks/1457102967604908157/7hOYVv5
 local player = game.Players.LocalPlayer
 local playerName = player and player.Name or "Unknown"
 local userId = player and player.UserId or 0
-local scriptVersion = "1.4.0"
+local scriptVersion = "1.4.1" -- Обновил версию для порядка
 local maxRetries = 10
 
 -- Определение платформы
@@ -244,6 +244,11 @@ local GAMES = {
         name = "SCP retroBreach",
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/scp",
         places = { 113217312262185, 129149797084589 }
+    },
+    {
+        name = "Blind Shot",
+        url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/blind%20shot",
+        places = { 118614517739521 }
     }
 }
 
@@ -329,6 +334,8 @@ if gameConfig then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Escape%20Tsunami%20for%20Brainrots"))()
         elseif gameConfig.name == "SCP retroBreach" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/scp"))()
+        elseif gameConfig.name == "Blind Shot" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/blind%20shot"))()
         end
     end
 else
