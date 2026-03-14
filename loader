@@ -189,6 +189,11 @@ end)()
 
 local GAMES = {
     {
+        name = "Clicking Simulator Ultimate",
+        url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/clicker",
+        places = { 107583203372622 }
+    },
+    {
         name = "Casual Stock",
         url  = "https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/casual%20stock",
         places = { 13985151437, 14145034258, 15267035203 }
@@ -334,6 +339,8 @@ if gameConfig then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/Escape%20Tsunami%20for%20Brainrots"))()
         elseif gameConfig.name == "SCP retroBreach" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/scp"))()
+        elseif gameConfig.name == "Clicking Simulator Ultimate" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/clicker"))()
         elseif gameConfig.name == "Blind Shot" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/dthghsdh030-spec/fdspfksda/refs/heads/main/blind%20shot"))()
         end
